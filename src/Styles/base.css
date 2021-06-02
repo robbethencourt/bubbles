@@ -1,0 +1,97 @@
+/* css variables */
+:root {
+  --blue: #00a8e8;
+  --blue-middle: #00BEFF;
+  --blue-light: #26c8ff;
+  --blue-ultra-light: #82e0ff;
+  --heading-font: "Roboto", sans-serif;
+  --text-color: #455155;
+}
+
+/* body */
+
+body {
+  padding: 0;
+  margin: 0;
+  color: var(--text-color);
+  touch-action: manipulation;
+}
+
+/* headings */
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--heading-font);
+}
+
+/* buttons */
+
+div button {
+  cursor: pointer;
+  background-color: var(--blue);
+  border-radius: 25px;
+}
+
+a.button {
+  height: 23px;
+  margin-bottom: 10px;
+  padding: 10px 30px 12px 30px;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: 100;
+  background-color: var(--blue);
+  transition: 0.25s;
+}
+
+div button:hover,
+div button:focus,
+.button:hover,
+.button:focus {
+  background-color: var(--blue-light);
+  transition: 0.25s;
+}
+
+div button.outline,
+a.outline {
+  color: var(--blue);
+  border: 1.5px solid var(--blue);
+  border-radius: 25px;
+  background-color: #fff;
+  transition: 0.25s;
+}
+
+div button.outline:hover,
+div button.outline:focus,
+a.outline:hover,
+a.outline:focus {
+  border-color: var(--blue-light);
+  color: var(--blue-light);
+  background-color: #fff;
+  transition: 0.25s;
+}
+
+div button.outline.-white,
+a.outline.-white {
+  padding: 10px;
+  color: #fff;
+  border: 1.5px solid #fff;
+  background-color: transparent;
+  transition: 0.25s;
+}
+
+div button.outline:hover,
+div button.outline:focus,
+a.outline:hover,
+a.outline:focus {
+  color: #fff;
+  background-color: var(--blue-light);
+  transition: 0.25s;
+}
+
+/* links */
+a {
+  text-decoration: none;
+}
