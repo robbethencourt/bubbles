@@ -1,0 +1,65 @@
+/* bubbles base styles */
+
+.-bubble-blue {
+  height: 200px;
+  width: 200px;
+  margin-left: -50px;
+  border-radius: 100px;
+  background-color: var(--blue);
+  background-image: radial-gradient(
+    circle at top right,
+    var(--blue-light),
+    var(--blue) 50%
+  );
+}
+
+.-bubble-pink {
+  height: 100px;
+  width: 100px;
+  margin-left: -50px;
+  border-radius: 50px;
+  background-color: var(--blue);
+  background-image: radial-gradient(
+    circle at top right,
+    var(--blue-light),
+    var(--blue) 50%
+  );
+}
+
+.-bubble-white {
+  height: 700px;
+  width: 700px;
+  margin-left: -50px;
+  border-radius: 350px;
+  background-color: #fff;
+}
+
+/* home, login and signup animation */
+
+.hsl-bubbles > .bubble-blue {
+  animation-name: bubble-float;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.hsl-bubbles > .bubble-pink {
+  animation-name: bubble-float;
+  animation-duration: 5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bubble-float {
+  0% {
+    margin-left: -50px;
+    margin-top: 0;
+  }
+  50% {
+    margin-left: -30px;
+    margin-top: 20px;
+  }
+  100% {
+    margin-left: -50px;
+    margin-top: 0;
+  }
+}

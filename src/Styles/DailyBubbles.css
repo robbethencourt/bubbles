@@ -1,0 +1,323 @@
+/* Daily Bubbles page */
+
+.daily-bubbles {
+  overflow: hidden;
+  position: relative;
+}
+
+.daily-bubbles > .-bubble-blue {
+  position: absolute;
+  top: 450px;
+  left: 10px;
+  z-index: -5;
+  width: 100px;
+  height: 100px;
+}
+
+.daily-bubbles > .-bubble-pink {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  z-index: -5;
+  width: 30px;
+  height: 30px;
+}
+
+.progress-circle.-blue-circle {
+  transform: rotate(-90deg);
+  transform-origin: 50%;
+  transition: 0.25s;
+}
+
+.daily-bubbles > .today-goal-display {
+  text-align: center;
+}
+
+.today-goal-display-p > .-goal-text {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.today-goal-display-p > .-goal-amount {
+  color: var(--blue);
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: -0.04em;
+}
+
+.daily-bubbles > .action-buttons {
+  padding-top: 20px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.daily-bubbles > .action-buttons > .-decrease {
+  margin-right: 25px;
+}
+
+.daily-bubbles > .action-buttons > .increase {
+  margin-left: 25px;
+}
+
+/* Daily Bubbles animations */
+
+/* content animations */
+
+/* show daily bubbles content */
+
+.daily-bubbles-display.show {
+  opacity: 0;
+  animation-name: show-daily-bubbles-content;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+.today-goal-display.show {
+  opacity: 0;
+  animation-name: show-daily-bubbles-content;
+  animation-delay: 0.05s;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+.action-buttons.show {
+  opacity: 0;
+  animation-name: show-daily-bubbles-content;
+  animation-delay: 0.1s;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-daily-bubbles-content {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* remove daily bubbles content */
+
+.daily-bubbles-display.remove {
+  opacity: 1;
+  animation-name: remove-daily-bubbles-content;
+  animation-delay: 0.1s;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+.today-goal-display.remove {
+  opacity: 1;
+  animation-name: remove-daily-bubbles-content;
+  animation-delay: 0.05s;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+.action-buttons.remove {
+  opacity: 1;
+  animation-name: remove-daily-bubbles-content;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes remove-daily-bubbles-content {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* bubbles animation */
+
+/* show daily bubbles bubbles */
+
+.daily-bubbles > .-bubble-pink.show {
+  right: -30px;
+  animation-name: show-daily-bubbles-bubble-pink;
+  animation-delay: 0.05s;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-daily-bubbles-bubble-pink {
+  0% {
+    right: -30px;
+  }
+  100% {
+    right: 20px;
+  }
+}
+
+.daily-bubbles > .-bubble-blue.show {
+  left: -50px;
+  animation-name: show-daily-bubbles-bubble-blue;
+  animation-delay: 0.1s;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-daily-bubbles-bubble-blue {
+  0% {
+    left: -50px;
+  }
+  100% {
+    left: 10px;
+  }
+}
+
+/* remove daily bubbles bubbles */
+
+.daily-bubbles > .-bubble-pink.remove {
+  right: 20px;
+  animation-name: remove-daily-bubbles-bubble-pink;
+  animation-delay: 0.2s;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes remove-daily-bubbles-bubble-pink {
+  0% {
+    right: 20px;
+  }
+  100% {
+    right: -30px;
+  }
+}
+
+.daily-bubbles > .-bubble-blue.remove {
+  left: 10px;
+  animation-name: remove-daily-bubbles-bubble-blue;
+  animation-delay: 0.15s;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes remove-daily-bubbles-bubble-blue {
+  0% {
+    left: 10px;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+/* styles for reaching goal for the day */
+
+.progress-circle-text {
+  transition: 1s;
+}
+
+.progress-circle-text.reached {
+  fill: var(--blue);
+  stroke: var(--blue);
+  transition: 1s;
+}
+
+.-goal-text {
+  transition: 1s;
+}
+
+.-goal-text.reached {
+  color: var(--blue);
+  transition: 1s;
+}
+
+.-bubble-blue.reached:nth-of-type(1),
+.-bubble-blue.reached:nth-of-type(2),
+.-bubble-blue.reached:nth-of-type(3),
+.-bubble-blue.reached:nth-of-type(4),
+.-bubble-blue.reached:nth-of-type(5),
+.-bubble-blue.reached:nth-of-type(6),
+.-bubble-blue.reached:nth-of-type(7),
+.-bubble-blue.reached:nth-of-type(8),
+.-bubble-blue.reached:nth-of-type(9) {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.5);
+  border: solid 1px var(--blue);
+  opacity: 1;
+  animation: bubble-blue-reached-opacit 2s;
+  animation-fill-mode: forwards;
+}
+
+.-bubble-blue.reached:nth-of-type(1) {
+  top: 600px;
+  left: 50%;
+  animation-duration: 2s;
+}
+
+.-bubble-blue.reached:nth-of-type(2) {
+  top: 650px;
+  left: 20%;
+  height: 90px;
+  width: 90px;
+  animation-delay: 0.2s;
+}
+
+.-bubble-blue.reached:nth-of-type(3) {
+  top: 620px;
+  left: 40%;
+  border-color: var(--blue);
+  animation-delay: 0.2s;
+}
+
+.-bubble-blue.reached:nth-of-type(4) {
+  top: 610px;
+  left: 52%;
+  animation-delay: 0.7s;
+}
+
+.-bubble-blue.reached:nth-of-type(5) {
+  top: 615px;
+  left: 70%;
+  height: 65px;
+  width: 65px;
+  animation-delay: 0.85s;
+}
+
+.-bubble-blue.reached:nth-of-type(6) {
+  top: 600px;
+  left: 57%;
+  height: 70px;
+  width: 70px;
+  border-color: var(--blue);
+  animation-delay: 1.1s;
+}
+
+.-bubble-blue.reached:nth-of-type(7) {
+  top: 630px;
+  left: 77%;
+  animation-delay: 1.25s;
+}
+
+.-bubble-blue.reached:nth-of-type(8) {
+  top: 610px;
+  left: 49%;
+  height: 100px;
+  width: 100px;
+  animation-delay: 1.35s;
+}
+
+.-bubble-blue.reached:nth-of-type(9) {
+  top: 600px;
+  left: 45%;
+  border-color: var(--blue);
+  animation-delay: 1.7s;
+}
+
+@keyframes bubble-blue-reached-opacit {
+  25% {
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: 0px;
+  }
+}

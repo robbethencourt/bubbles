@@ -1,0 +1,317 @@
+/* navigation */
+
+/* header */
+
+.app-header {
+  height: 35px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+}
+
+.app-header > .logo-container {
+  width: 98%;
+  margin-left: 2%;
+}
+
+.app-header > .logo-container > .logo {
+  max-height: 35px;
+}
+
+/* navigation icon */
+
+.nav-icon {
+  width: 45px;
+  margin-top: 5px;
+  float: right;
+}
+
+.nav-bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--blue-light);
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+/* nav */
+
+.navigation-menu {
+  display: block;
+  overflow: hidden;
+  height: 100vh;
+  padding: 0px 5% 5px 5%;
+  position: absolute;
+  top: 0;
+  background-color: var(--blue-ultra-light);
+}
+
+.navigation-menu.show {
+  width: 0%;
+  margin-left: 100%;
+  animation-name: show-nav;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-nav {
+  0% {
+    width: 0%;
+    margin-left: 100%;
+  }
+  60% {
+    width: 90%;
+    margin-left: 0;
+  }
+  100% {
+    width: 90%;
+    margin-left: 0;
+  }
+}
+
+.navigation-menu.remove {
+  width: 90%;
+  margin-left: 0%;
+  animation-name: remove-nav;
+  animation-duration: 0.2s;
+  animation-delay: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes remove-nav {
+  0% {
+    width: 90%;
+    margin-left: 0%;
+  }
+  40% {
+    width: 90%;
+    margin-left: 0%;
+  }
+  100% {
+    width: 0%;
+    margin-left: 100%;
+  }
+}
+
+.nav-menu-list {
+  padding: 0;
+  list-style-type: none;
+  position: relative; /* so the bubbles appear behind this content */
+  text-align: center;
+}
+
+.nav-menu-list.show {
+  opacity: 0;
+  animation-name: show-nav-content;
+  animation-duration: 0.25s;
+  animation-delay: 0.15s;
+  animation-fill-mode: forwards;
+}
+
+.nav-menu-list.remove {
+  opacity: 1;
+  animation-name: remove-nav-content;
+  animation-duration: 0.25s;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
+}
+
+.nav-menu-list > .list-item {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 1.2em;
+}
+
+.nav-menu-list > .list-item:first-of-type {
+  padding-top: 15px;
+}
+
+/* the ounces displayed on the nav page between the 2oz adjustment buttons */
+.ounces-today-today-water {
+  font-weight: bold;
+}
+
+.nav-menu-list > .list-item > .list-link {
+  color: #fff;
+}
+
+.nav-menu-list > .list-item.-non-link {
+  color: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+}
+
+@keyframes show-nav-content {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes remove-nav-content {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* navigation bubbles */
+
+.nav-bubbles-container {
+  position: absolute;
+  top: 0;
+}
+
+/* pink bubble 1 */
+
+.navigation-menu > .nav-bubbles-container > .-bubble-pink:nth-of-type(1) {
+  width: 400px;
+  height: 400px;
+  margin-top: -50px;
+  border-radius: 200px;
+}
+
+.navigation-menu.show > .nav-bubbles-container > .-bubble-pink:nth-of-type(1) {
+  opacity: 0;
+  margin-left: -550px;
+  animation-name: show-nav-bubbles-1;
+  animation-duration: 0.25s;
+  animation-delay: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-nav-bubbles-1 {
+  0% {
+    opacity: 0;
+    margin-left: -550px;
+  }
+  100% {
+    opacity: 1;
+    margin-left: -150px;
+  }
+}
+
+.navigation-menu.remove
+  > .nav-bubbles-container
+  > .-bubble-pink:nth-of-type(1) {
+  opacity: 1;
+  margin-left: -150px;
+  animation-name: remove-nav-bubbles-1;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes remove-nav-bubbles-1 {
+  0% {
+    opacity: 1;
+    margin-left: -150px;
+  }
+  100% {
+    opacity: 0;
+    margin-left: -550px;
+  }
+}
+
+/* pink bubble 2 */
+
+.navigation-menu > .nav-bubbles-container > .-bubble-pink:nth-of-type(2) {
+  width: 600px;
+  height: 600px;
+  margin-top: -200px;
+  border: solid 1px var(--blue-middle);
+  border-radius: 300px;
+}
+
+.navigation-menu.show > .nav-bubbles-container > .-bubble-pink:nth-of-type(2) {
+  margin-left: 500px;
+  opacity: 0;
+  animation-name: show-nav-bubbles-2;
+  animation-duration: 0.35s;
+  animation-delay: 0.15s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-nav-bubbles-2 {
+  0% {
+    margin-left: 500px;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 200px;
+    opacity: 1;
+  }
+}
+
+.navigation-menu.remove
+  > .nav-bubbles-container
+  > .-bubble-pink:nth-of-type(2) {
+  margin-left: 200px;
+  opacity: 1;
+  animation-name: remove-nav-bubbles-2;
+  animation-duration: 0.35s;
+  animation-delay: 0.05s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes remove-nav-bubbles-2 {
+  0% {
+    margin-left: 200px;
+    opacity: 1;
+  }
+  100% {
+    margin-left: 500px;
+    opacity: 0;
+  }
+}
+
+/* blue bubble */
+
+.navigation-menu > .nav-bubbles-container > .-bubble-blue {
+  width: 200px;
+  height: 200px;
+  margin-top: -200px;
+  margin-left: 150px;
+  border-radius: 100px;
+}
+
+.navigation-menu.show > .nav-bubbles-container > .-bubble-blue {
+  opacity: 0;
+  margin-top: 500px;
+  animation-name: show-nav-bubbles-3;
+  animation-duration: 0.35s;
+  animation-delay: 0.25s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-nav-bubbles-3 {
+  0% {
+    opacity: 0;
+    margin-top: 500px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: -200px;
+  }
+}
+
+.navigation-menu.remove > .nav-bubbles-container > .-bubble-blue {
+  animation-name: remove-nav-bubbles-3;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes remove-nav-bubbles-3 {
+  0% {
+    opacity: 1;
+    margin-top: -200px;
+  }
+  100% {
+    opacity: 0;
+    margin-top: 500px;
+  }
+}
