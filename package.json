@@ -23,6 +23,7 @@
     "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^9.0.0",
     "css-loader": "^5.2.6",
+    "elm": "^0.19.1-5",
     "elm-hot-webpack-loader": "^1.1.8",
     "elm-webpack-loader": "^7.0.1",
     "file-loader": "^6.2.0",
