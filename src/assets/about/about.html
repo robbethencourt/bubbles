@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-40824103-3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag("js", new Date());
+
+gtag("config", "UA-40824103-3");
+</script>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://unpkg.com/wingcss"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+    <link rel="stylesheet" href="about-v1.css"/>
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="../favicon.ico">
+    <title>Bubbles Water Tracking App | About</title>
+</head>
+<body>
+  <section class="intro">
+    <img src="../bubbles-logo.svg" alt="bubbles logo" />
+    <h2 class="-slogan">water tracking app by Pilates Boutique</h2>
+    <p>
+      <a href="/" class="button">Start Using Bubbles!</a>
+    </p>
+    <p class="-learn-more">
+      or see below to learn more
+    </p>
+    <div class="-bubble-blue"></div>
+    <div class="-bubble-blue"></div>
+  </section>
+  <section class="daily-bubbles-about">
+    <div class="-bubble-white"></div>
+    <div class="-bubble-white"></div>
+    <div class="container">
+      <div class="container-content">
+        <h2 class="section-heading">Daily Bubbles</h2>
+        <p>
+          Increase your daily water intake each time you finish your water bottle. It's that simple. One click to increase your daily intake, and don't worry, you can easily decrease by the same amount if you need to.
+        </p>
+        <h4>How to Track Your Daily Water Intake</h4>
+        <p>
+          As you hydrate throughout the day the bubble outline will go from pink to blue. And when you reach your goal for the day you'll see a congratulatory bubbles animation!
+        </p>
+      </div>
+      <div class="container-image">
+        <img src="daily-bubbles-display.jpg" class="screen-display -daily-bubbles-screen" alt="screenshot of daily bubbles page showing increase and decrease buttons to track daily water intake." />
+      </div>
+      <div class="container-content">
+        <h4>Bubbles, You're So Clever!</h4>
+        <p>
+          But how does Bubbles know how big my water bottle is? And how does bubbles know what my water intake goal is for the day?
+        </p>
+      </div>
+    </div>
+    <div class="-bubble-white--bottom"></div>
+  </section>
+  <section class="settings-about">
+    <div class="-bubble-blue"></div>
+    <div class="-bubble-pink"></div>
+    <div class="container">
+      <div class="container-content--settings">
+        <h2 class="section-heading">My Settings</h2>
+        <p>
+          You can quickly adjust your water bottle size and your daily goal on the settings page. Bubbles will remember them once you update them. Just set it and start hydrating.
+        </p>
+      </div>
+      <div class="container-image--settings">
+        <img src="settings-display.jpg" class="screen-display -settings-screen" alt="screenshot of settings page to update goal and water bottle size." />
+      </div>
+      <div class="container-content--settings">
+        <h4>But I Don't Always Drink from My Water Bottle</h4>
+        <p>
+          So true. Sometimes you're at lunch and you need to adjust your intake a few ounces at a time. You can do that on the Navigation page.
+        </p>
+      </div>
+    </div>
+    <div class="-bubble-pink--bottom"></div>
+    <div class="-bubble-pink--bottom"></div>
+  </section>
+  <section class="navigation-about">
+    <div class="-bubble-white"></div>
+    <div class="-bubble-white"></div>
+    <div class="container">
+      <div class="container-content">
+        <h2 class="section-heading">Navigation</h2>
+        <p>
+          Just click on the nav icon &#9776; on the top right and quickly adjust your intake 2 oz at a time. You can also reach the settings page and the daily water tracking page through the nav.
+        </p>
+      </div>
+      <div class="container-image">
+        <img src="nav-display.jpg" class="screen-display -navigation-screen" alt="screenshot of navigation." />
+      </div>
+      <div class="container-content">
+        <p>
+          The About link in the nav will bring you back to this page if you ever want to refresh yourself on how to use bubbles.
+        </p>
+        <h4>Donations are Appreciated</h4>
+        <p>
+          Also, if you enjoy the app consider making a donation. We sure will appreciate it and it'll motivate us to bring more health conscious apps to you!
+        </p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer-about">
+    <p>
+      <a href="/" class="button">Start Using Bubbles!</a>
+    </p>
+    <p class="copyright-about">
+      &#169; Copyright <span id="js-date"></span> Pilates Boutique
+    </p>
+  </footer>
+<script type="text/jscript">
+function getCurrentYearString() {
+  return `${new Date().getFullYear()}`;
+}
+function addYearToHtml() {
+  let jsYear = document.getElementById("js-date");
+  const textNodeToAppend = document.createTextNode(getCurrentYearString());
+  jsYear.appendChild(textNodeToAppend);
+}
+addYearToHtml();
+</script>
+</body>
+</html>
