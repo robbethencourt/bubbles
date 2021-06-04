@@ -31,7 +31,7 @@ var common = {
     ],
     resolve: {
         modules: [path.join(__dirname, "src"), "node_modules"],
-        extensions: [".js", ".elm", ".scss", ".png"]
+        extensions: [".js", ".elm", ".css", ".png"]
     },
     module: {
         rules: [
@@ -112,13 +112,13 @@ if (MODE === "production") {
             // Copy static assets
             // this will error out if no static assets are in the folder
             // or if the folder is missing!
-            // new CopyWebpackPlugin({
-            //     patterns: [
-            //         {
-            //             from: "src/assets"
-            //         }
-            //     ]
-            // }),
+            new CopyWebpackPlugin({
+                patterns: [
+                    {
+                        from: "src/assets"
+                    }
+                ]
+            }),
             new MiniCssExtractPlugin({
                 // Options similar to the same options in webpackOptions.output
                 // both options are optional
