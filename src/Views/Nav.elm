@@ -37,7 +37,7 @@ view transitionClassName _ waterDetails _ addtoTodayWater subtractFromTodayWater
                 , li [ class "list-item" ]
                     [ a [ class "list-link", href "http://www.pilatesboutiquefl.com/product/support-bubbles/", target "_blank" ] [ text "Support Bubbles" ] ]
                 , li [ class "list-item" ]
-                    [ a [ class "list-link", href "https://www.waterbubbles.me/about/about.html" ] [ text "About" ] ]
+                    [ a [ class "list-link", href "https://www.waterbubbles.me/about.html" ] [ text "About" ] ]
                 ]
             ]
         ]
