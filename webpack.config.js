@@ -89,8 +89,7 @@ if (MODE === "development") {
                             loader: "elm-webpack-loader",
                             options: {
                                 // add Elm's debug overlay to output
-                                debug: true,
-                                cwd: __dirname
+                                debug: true
                             }
                         }
                     ]
@@ -102,6 +101,7 @@ if (MODE === "development") {
             stats: "errors-only",
             contentBase: path.join(__dirname, "src/assets"),
             historyApiFallback: true,
+            hot: true
         }
     });
 }
