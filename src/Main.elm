@@ -68,8 +68,13 @@ update msg model =
         LinkClicked urlRequest ->
             case urlRequest of
                 Browser.Internal url ->
-                    -- make change to the Route.transitionFromPage function to take the key and url so it then gets used in SetPage as we need to transition the current page with an animation and then transition the new page with an animation
-                    ( model, Nav.pushUrl model.key (Url.toString url) )
+                    -- not pretty, but it works. Would be better to figure out internal links
+                    -- that have .html pages and have elm know when to load those instead
+                    if url.path == "/about.html" then
+                        ( model, Nav.load url.path )
+
+                    else
+                        ( model, Nav.pushUrl model.key (Url.toString url) )
 
                 Browser.External href ->
                     ( model, Nav.load href )
