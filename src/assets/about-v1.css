@@ -93,6 +93,10 @@ section {
   padding: 5em 1em;
 }
 
+.about-page-logo {
+  width: 125px;
+}
+
 /* intro about page */
 .intro {
   overflow: hidden;
