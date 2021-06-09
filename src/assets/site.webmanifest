@@ -2,7 +2,6 @@
     "lang": "en",
     "name": "bubbles",
     "short_name": "bubbles",
-    "start_url": "./index.html",
     "description": "A water tracking app.",
     "icons": [
         {
